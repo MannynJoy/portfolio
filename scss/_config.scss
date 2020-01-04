@@ -35,8 +35,19 @@ $background-opacity:0.7;
 
 //Media query mixins
 
-@mixin mediaSm{
-    @media screen and (max-width:500px){
+
+
+
+
+@mixin mediaXl{
+    @media screen and (min-width:1171px){
+        @content;
+    }
+}
+
+
+@mixin mediaLg{
+    @media screen and (min-width:769px) and (max-width:1170px){
         @content;
     }
 }
@@ -48,14 +59,8 @@ $background-opacity:0.7;
     }
 }
 
-@mixin mediaLg{
-    @media screen and (min-width:769px) and (max-width:1170px){
-        @content;
-    }
-}
-
-@mixin mediaXl{
-    @media screen and (min-width:1171px){
+@mixin mediaSm{
+    @media(max-width:500px){
         @content;
     }
 }
