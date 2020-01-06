@@ -15,7 +15,8 @@
 @include mediaMd{
     main#home,
     main#about,
-    main#work{
+    main#work,
+    main#contact{
         align-items: center;
         text-align: center;
         padding: 1rem;
@@ -73,7 +74,8 @@
     main{
         &#home .lg-heading,
         &#about .lg-heading,
-        &#work .lg-heading{
+        &#work .lg-heading,
+        &#contact .lg-heading{
             margin-top: 7vh;
             font-size: 4rem;
             overflow: hidden;
@@ -104,5 +106,18 @@
 
     .projects{
         grid-template-columns: 1fr;
+    }
+
+    .boxes{
+        div{
+            font-size: 1rem;
+            padding: .8rem 2rem 1rem 2rem;
+    
+            &:hover{
+                padding: 0.2rem 1.2rem 0.5rem 1.2rem;
+                
+            }
+        }
+    
     }
 }

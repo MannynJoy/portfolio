@@ -304,6 +304,44 @@ main#home h1 {
   transition: all .5s ease-out;
 }
 
+.boxes {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.boxes div {
+  font-size: 2rem;
+  border: 3px #fff solid;
+  padding: 1rem 2.5rem 1.5rem 2.5rem;
+  margin-bottom: 3rem;
+  transition: all .5s ease-out;
+}
+
+.boxes div:hover {
+  padding: 0.3rem 1.5rem 0.5rem 1.5rem;
+  background: #eece1a;
+  color: #000;
+  cursor: pointer;
+}
+
+.boxes div:hover span {
+  color: #000;
+}
+
 .btn, .btn-dark, .btn-light {
   display: block;
   padding: .5em 1em;
@@ -343,14 +381,16 @@ main#home h1 {
 @media screen and (max-width: 768px) {
   main#home,
   main#about,
-  main#work {
+  main#work,
+  main#contact {
     align-items: center;
     text-align: center;
     padding: 1rem;
   }
   main#home .lg-heading,
   main#about .lg-heading,
-  main#work .lg-heading {
+  main#work .lg-heading,
+  main#contact .lg-heading {
     line-height: 1;
     margin-bottom: 1rem;
   }
@@ -394,7 +434,8 @@ main#home h1 {
 @media (max-width: 500px) {
   main#home .lg-heading,
   main#about .lg-heading,
-  main#work .lg-heading {
+  main#work .lg-heading,
+  main#contact .lg-heading {
     margin-top: 7vh;
     font-size: 4rem;
     overflow: hidden;
@@ -418,5 +459,21 @@ main#home h1 {
   }
   .projects {
     grid-template-columns: 1fr;
+  }
+  .boxes div {
+    font-size: 1.5rem;
+    border: 3px #fff solid;
+    padding: .8rem 2rem 1rem 2rem;
+    margin-bottom: 3rem;
+    transition: all .5s ease-out;
+  }
+  .boxes div:hover {
+    padding: 0.2rem 1.2rem 0.5rem 1.2rem;
+    background: #eece1a;
+    color: #000;
+    cursor: pointer;
+  }
+  .boxes div:hover span {
+    color: #000;
   }
 }
