@@ -1,6 +1,9 @@
 // Widescreens
 @include mediaXl{
-    
+    .projects{
+        grid-template-columns: repeat(4,1fr);
+
+    }
 }
 
 // Desktops & Laptops
@@ -11,9 +14,11 @@
 // Tablets & Small Laptops
 @include mediaMd{
     main#home,
-    main#about{
+    main#about,
+    main#work{
         align-items: center;
         text-align: center;
+        padding: 1rem;
 
         .lg-heading{
             line-height: 1;
@@ -57,13 +62,18 @@
         'job3';
         grid-template-columns: 1fr;
     }
+    .projects{
+        grid-template-columns: repeat(2,1fr);
+
+    }
 }
 
 // Smartphones
 @include mediaSm{
     main{
         &#home .lg-heading,
-        &#about .lg-heading{
+        &#about .lg-heading,
+        &#work .lg-heading{
             margin-top: 7vh;
             font-size: 4rem;
             overflow: hidden;
@@ -92,4 +102,7 @@
 
     }
 
+    .projects{
+        grid-template-columns: 1fr;
+    }
 }
